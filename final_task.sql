@@ -343,7 +343,7 @@ WHERE a1.actor_id < a2.actor_id -- para evitar que el mismo par de actores me ge
 GROUP BY a1.actor_id, a2.actor_id
 HAVING film_count >= 1;
 
--- Con CTE's:
+-- También podemos hacer lo mismo con CTE's:
 WITH actors_films AS ( -- Primero, creamos una tabla temporal que muestre qué actores han participado en qué películas
 	SELECT
 		fa.actor_id,
@@ -372,4 +372,3 @@ INNER JOIN actor a2
 ON ap.actor_2 = a2.actor_id
 GROUP BY ap.actor_1, ap.actor_2, a1.first_name, a1.last_name, a2.first_name, a2.last_name
 HAVING COUNT(DISTINCT ap.film_id) >= 1;
--- No da el mismo resultado

@@ -19,3 +19,4 @@ The tasks explore a variety of SQL concepts, including:
 - Use of set operators (NOT IN, EXISTS, LIKE) and REGEXP
 - Joins (INNER, LEFT, SELF JOIN)
 - Subqueries
+- CTE's
